@@ -2,5 +2,6 @@ angular
   .module('FruitApp', [
     'ui.router',
     'ngResource',
-    'angular-jwt'
+    'angular-jwt',
+    'ngMessages'
   ]);

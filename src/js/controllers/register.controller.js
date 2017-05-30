@@ -2,8 +2,11 @@ RegisterCtrl.$inject = ['User', 'CurrentUserService'];
 function RegisterCtrl(User, CurrentUserService){
   const vm = this;
 
-  vm.register = () => {
-    User
+  vm.register = register;
+
+  function register() {
+    if (vm.registerForm.$valid) {
+      User
       .register(vm.user)
       .$promise
       .then(() => {
@@ -11,5 +14,6 @@ function RegisterCtrl(User, CurrentUserService){
       }, err => {
         console.log(err);
       });
-  };
+    }
+  }
 }

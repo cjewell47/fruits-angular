@@ -2,7 +2,9 @@ LoginCtrl.$inject = ['User', 'CurrentUserService'];
 function LoginCtrl(User, CurrentUserService) {
   const vm = this;
 
-  vm.login = () => {
+  vm.login = login;
+
+  function login() {
     User
       .login(vm.user)
       .$promise

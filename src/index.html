@@ -8,8 +8,22 @@
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body>
+  <body ng-controller="MainCtrl as main">
     <header>
+      <ul>
+        <li ng-show="main.user">
+          <p>Welcome, {{ main.user.username }}</p>
+        </li>
+        <li ng-hide="main.user">
+          <a ui-sref="register">Sign Up</a>
+        </li>
+        <li ng-hide="main.user">
+          <a ui-sref="login" >Sign In</a>
+        </li>
+        <li ng-show="main.user">
+          <a ng-click="main.logout()">Logout</a>
+        </li>
+      </ul>
     </header>
     <main ui-view>
 

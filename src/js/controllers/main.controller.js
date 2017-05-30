@@ -1,6 +1,6 @@
 angular
   .module('RailsAngular')
-  .controller('MainCtrl');
+  .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
 function MainCtrl($rootScope, CurrentUserService, $state) {

@@ -1,3 +1,7 @@
+angular
+  .module('FruitApp')
+  .controller('RegisterCtrl', RegisterCtrl);
+
 RegisterCtrl.$inject = ['User', 'CurrentUserService'];
 function RegisterCtrl(User, CurrentUserService){
   const vm = this;

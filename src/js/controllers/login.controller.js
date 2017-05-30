@@ -1,3 +1,7 @@
+angular
+  .module('FruitApp')
+  .controller('LoginCtrl', LoginCtrl);
+
 LoginCtrl.$inject = ['User', 'CurrentUserService'];
 function LoginCtrl(User, CurrentUserService) {
   const vm = this;

@@ -1,8 +1,7 @@
-<!-- <ul ng-controller="FruitsIndexCtrl"> -->
+
+<h1>Our Fruits</h1>
+<ul>
   <li ng-repeat="fruit in vm.fruits">
-    {{ fruit }}
+    <p>{{ fruit.user.first_name }}'s {{ fruit.description }} {{ fruit.name }}</p>
   </li>
-<!-- </ul> -->
-
-
-H1 TEST
+</ul>

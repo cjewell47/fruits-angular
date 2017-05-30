@@ -24,6 +24,9 @@
         <li ng-show="main.user">
           <a ng-click="main.logout()">Logout</a>
         </li>
+        <li ng-show="main.user">
+          <a ui-sref="fruitsIndex">Our Fruits</a>
+        </li>
       </ul>
     </header>
     <main ui-view>

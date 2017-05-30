@@ -1,5 +1,5 @@
 angular
-  .module('RailsAngular')
+  .module('FruitApp')
   .controller('MainCtrl', MainCtrl);
 
 MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];

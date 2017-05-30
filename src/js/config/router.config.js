@@ -24,8 +24,8 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     controllerAs: 'vm'
   })
   .state('fruitsIndex', {
-    url: '/users',
-    templateUrl: '/js/views/users/fruit.html',
+    url: '/fruits',
+    templateUrl: '/js/views/users/fruits.html',
     controller: 'FruitsIndexCtrl',
     controllerAs: 'vm'
   });

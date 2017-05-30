@@ -1,6 +1,6 @@
 <div>
 <h1>Register</h1>
-<form name="vm.registerForm" novalidate>
+<form name="vm.registerForm" novalidate ng-submit="vm.register()">
   <div class="form-group">
     <label for="name">Username</label><br>
     <input class="form-control" type="text" name="username" ng-model="vm.user.username" placeholder="Username" required>
@@ -49,7 +49,7 @@
 
   <div class="form-group">
     <label for="name">Password Confirmation</label><br>
-    <input class="form-control" type="password" name="passwordConfirmation" ng-model="vm.user.passwordConfirmation" placeholder="retype your password" required ng-pattern="vm.user.password">
+    <input class="form-control" type="password" name="password_confirmation" ng-model="vm.user.password_confirmation" placeholder="retype your password" required ng-pattern="vm.user.password">
   </div>
 
   <div class="ng-message-error" ng-messages="vm.registerForm.passwordConfirmation.$error" ng-show="(vm.registerForm.$submitted || vm.registerForm.passwordConfirmation.$touched)">

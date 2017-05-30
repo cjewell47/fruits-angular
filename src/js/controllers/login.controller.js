@@ -18,5 +18,5 @@ function LoginCtrl(User, CurrentUserService) {
         console.log(err);
       }
     );
-  };
+  }
 }

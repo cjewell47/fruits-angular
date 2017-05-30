@@ -1,2 +1,6 @@
 angular
-  .module('FruitApp', []);
+  .module('FruitApp', [
+    'ui.router',
+    'ngResource',
+    'angular-jwt'
+  ]);

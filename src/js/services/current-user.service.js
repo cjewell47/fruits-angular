@@ -2,8 +2,8 @@ angular
   .module('FruitApp')
   .service('CurrentUserService', CurrentUserService);
 
-CurrentUserService.$inject = ['TokenService'];
-function CurrentUserService(TokenService) {
+CurrentUserService.$inject = ['TokenService', '$rootScope', 'User'];
+function CurrentUserService(TokenService, $rootScope, User) {
   const self = this;
 
   self.getUser = () => {
@@ -12,11 +12,11 @@ function CurrentUserService(TokenService) {
 
     if (decoded) {
       User
-      .get({ id: decoded.id }).$promise
+      .get({ id: decoded.id })
+      .$promise
       .then(data => {
         console.log(data);
       });
     }
   };
-
 }
